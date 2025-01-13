@@ -1,0 +1,80 @@
+### TÌM HIỂU VỀ NESTJS
+- NestJS là một framework NodeJS hiệu quả, mạnh mẽ, linh hoạt và dễ sử dụng để xây dựng các ứng dụng server-side hiện đại.
+- NestJS sử dụng TypeScript làm ngôn ngữ mặc định, giúp tăng hiệu suất và tính dễ bảo trì của ứng dụng.
+- NestJS sử dụng cấu trúc module để tổ chức mã nguồn, giúp mã nguồn trở nên dễ bảo trì, mở rộng và tái sử dụng.
+- NestJS hỗ trợ nhiều loại ứng dụng như ứng dụng web, API, microservices, ứng dụng thời gian thực, ứng dụng ghi đồng bộ, ứng dụng ghi không đồng bộ.
+
+### CÁC CHỨC NĂNG CHÍNH CỦA NESTJS
+
+1. Dependency Injection
+2. Middleware
+3. Exception Filter
+4. Pipes
+5. Guards
+6. Interceptors
+7. Custom Decorators
+8. Swagger
+9. Websockets
+10. GraphQL
+11. Caching
+12. Serialization
+13. Validation
+14. Logger
+15. Testing
+16. Security
+17. Performance
+18. Scalability
+19. Microservices
+20. GraphQL
+21. Websockets
+22. WebSockets
+23. OpenAPI
+24. gRPC
+25. Webhooks
+26. WebSockets
+27. Microservices
+
+### CÁC ĐIỂM MẠNH CỦA NESTJS
+
+1. Dễ học và sử dụng
+2. TypeScript
+3. Cấu trúc module
+4. Dependency Injection
+5. Middleware
+6. Exception Filter
+7. Pipes
+8. Guards
+9. Interceptors
+10. Custom Decorators
+11. Swagger
+12. Websockets
+13. GraphQL
+14. Caching
+15. Serialization
+
+
+1. CONTROLLER có trách nhiệm nhận vào các request và trả về response cho client.
+3. Học các khái niệm cơ bản
+Modules: Hiểu cách tổ chức mã nguồn thành các module.
+Controllers: Xử lý các yêu cầu HTTP (GET, POST, PUT, DELETE).
+Providers/Services: Tạo các dịch vụ xử lý logic nghiệp vụ.
+Middleware: Xử lý các logic trước khi yêu cầu đến Controller.
+Guards: Tìm hiểu bảo mật và xác thực (Authentication & Authorization).
+Pipes: Xử lý và kiểm tra dữ liệu trước khi xử lý yêu cầu.
+4. Xây dựng ứng dụng cơ bản
+Tạo API CRUD cơ bản để quản lý tài nguyên như User hoặc Product.
+Sử dụng TypeORM hoặc Prisma để kết nối cơ sở dữ liệu.
+Ví dụ: Tạo module User với các route CRUD.
+5. Tích hợp các thư viện phổ biến
+Database: Sử dụng TypeORM/Sequelize/Prisma.
+Validation: class-validator và class-transformer.
+Authentication: Passport.js (JWT hoặc OAuth2).
+6. Tìm hiểu các tính năng nâng cao
+WebSocket: Xây dựng ứng dụng real-time.
+GraphQL: Nếu cần xây dựng API với GraphQL.
+Task Scheduling: Tìm hiểu cách lên lịch tác vụ (Schedule).
+Microservices: Xây dựng ứng dụng phân tán.
+
+
+**** TYPESCRIPT ****
+1. closure
