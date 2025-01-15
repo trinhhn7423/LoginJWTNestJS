@@ -6,11 +6,12 @@ import { TypeOrmModule, TypeOrmModuleOptions } from '@nestjs/typeorm';
 import { DataSource } from 'typeorm';
 import { AuthEntity } from './modules/auth/auth.entity';
 import { LoggerMiddleware } from './common/middleware/logger.middleware';
+import { ConfigModule } from '@nestjs/config';
 
 const typeOrmOption: TypeOrmModuleOptions = {
   type: 'mysql',
-  host: 'localhost',
-  port: 3306,
+  host: process.env.DATABASE_HOST,
+  port: +process.env.DATABASE_PORT,
   username: 'root',
   password: '',
   database: 'test',
@@ -19,7 +20,13 @@ const typeOrmOption: TypeOrmModuleOptions = {
 };
 
 @Module({
-  imports: [TypeOrmModule.forRoot(typeOrmOption), AuthModule],
+  imports: [
+    TypeOrmModule.forRoot(typeOrmOption),
+    ConfigModule.forRoot({
+      isGlobal: true,
+    }),
+    AuthModule,
+  ],
   controllers: [AppController],
   providers: [AppService],
 })

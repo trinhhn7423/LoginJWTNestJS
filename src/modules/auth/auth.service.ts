@@ -58,17 +58,17 @@ export class AuthService {
   }
 
   generateAccessToken(payload: Payload): string {
-    const access_token: string = this.jwtService.sign(payload, {
+    return this.jwtService.sign(payload, {
       expiresIn: '120s',
+      secret: 'secret',
     });
-    return access_token;
   }
 
   generateRefreshToken(payload: Payload) {
-    const refresh_token: string = this.jwtService.sign(payload, {
+    return this.jwtService.sign(payload, {
       expiresIn: '7d',
+      secret: 'secretRefresh',
     });
-    return refresh_token;
   }
 
   async login(
@@ -101,9 +101,11 @@ export class AuthService {
     }
   }
 
-  refreshToken(refresh_token: string) {
+  async refreshToken(refresh_token: string) {
     try {
-      const verify = this.jwtService.verify(refresh_token);
+      const verify = await this.jwtService.verifyAsync(refresh_token, {
+        secret: 'secretRefresh',
+      });
       console.log('verify', verify);
 
       return {
